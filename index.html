@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Centering in CSS - Horizontal and Vertical">
+    <meta name="author" content="Vo Tuan Trung">
+
+    <meta property="og:url" content="http://trungk18.github.io/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="I help companies and agencies build standards-compliant front-ends for fast, accessible and responsive web sites and applications." />
+    <meta property="og:image" content="http://trungk18.github.io/img/facebook-logo.jpg" />
+
+    <title>Centering in CSS - Horizontal and Vertical</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+    <meta name="viewport" content="width=device-width;initial-scale=1" />
+    <style type="text/css">
+        /*Common CSS*/
+        body {
+            padding: 0 0 5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            padding: 20px;
+            background: #e7e7e7;
+        }
+
+        .navbar-container {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .brand > img {
+            max-width: 70px;
+        }
+
+        .tutorial-anchor {
+            font-size: 12px;
+            margin: 4px;
+        }
+
+        .main-background {
+            background: #e7e7e7;
+        }
+
+        .change-content {
+            padding: 5px;
+        }
+
+        a::before, a::after, .btn::before {
+            font-family: 'FontAwesome';
+        }
+
+        .previous-tutorial::before {
+            content: '\f060';
+            margin: 5px;
+        }
+
+        .next-tutorial {
+            float: right;
+        }
+
+            .next-tutorial::after {
+                margin: 5px;
+                content: '\f118';
+            }
+
+        .container {
+            max-width: 60em;
+            margin: 0 auto;
+        }
+
+        .border-wrapper {
+            border: 3px solid #ee6d6d;
+        }
+
+        .big-heading {
+            font-family: 'Open sans', sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 120%;
+        }
+
+        .backstretch {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        /*End Common CSS*/
+
+        /*Main CSS*/
+        .horizontal-inline-element-center {
+            text-align: center;
+        }
+
+        .horizontal-block-element-center {
+            max-width: 40em;
+            margin: 0 auto;
+        }
+
+        .wrap-row {
+            overflow: auto;
+        }
+
+        .wrap-col {
+            float: left;
+            width: 33.333333%;
+            position: relative;
+        }
+
+            .wrap-col::before {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                background: rgba(128, 128, 128, 0.4);
+            }
+
+        .wrap-background {
+            min-height: 250px;
+        }
+
+        .text-wrap {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+            z-index: 1;
+            text-align: center;
+        }
+
+            .text-wrap a {
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="change-content main-background">
+        <a class="tutorial-anchor previous-tutorial" href="http://trungk18.github.io/demo/animated-button-with-css3.html" title="Animated Button with CSS3">Previous Tutorial</a>
+        <a class="tutorial-anchor next-tutorial" href="https://github.com/trungk18/Centering-in-CSS-Horizontal-and-Vertical" title="Centering in CSS Horizontal and Vertical">Back to Github repository</a>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="brand" href="http://trungk18.github.io/"><img src="http://trungk18.github.io/img/trungk18.png" class="img-responsive" title="trungk18" alt="trungk18" /></a>
+        </div>
+    </nav>
+    <div class="container">
+        <section class="horizontal-center-wrapper">
+            <h1 class="big-heading">Horizontal</h1>
+            <div class="horizontal-inline-element">
+                <h3>1. Inline element (like text or button..)</h3>
+                <div class="border-wrapper horizontal-inline-element-center">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div><!-- End horizontal-inline-element-->
+
+            <div class="horizontal-block-element">
+                <h3>2. Block element (div)</h3>
+                <div class="border-wrapper horizontal-block-element-center">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div><!-- End horizontal-block-element-->
+        </section><!-- End horizontal-center-wrapper -->
+
+        <section class="vertical-center-wrapper">
+            <h1 class="big-heading">Vertical</h1>
+            <h3>3. Vertical Anything</h3>
+
+            <div class="wrap-row">
+                <div class="wrap-col">
+                    <div class="text-wrap">
+                        <h1>
+                            <a href="#">Pizza</a>
+                        </h1>
+                        <p>
+                            <a href="#">Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven</a>
+                        </p>
+                    </div>
+                    <div class="wrap-background backstretch" style="background-image: url(pizza.jpg)"></div>
+                </div>
+                <div class="wrap-col">
+                    <div class="text-wrap">
+                        <h1>
+                            <a href="#">Macaron</a>
+                        </h1>
+                        <p>
+                            <a href="#">A macaron is a French sweet meringue-based confection made with egg white</a>
+                        </p>
+                    </div>
+                    <div class="wrap-background backstretch" style="background-image: url(macaron.jpg)"></div>
+                </div>
+                <div class="wrap-col">
+                    <div class="text-wrap">
+                        <h1>
+                            <a href="#">Rolled Cake</a>
+                        </h1>
+                        <p>
+                            <a href="#">A thin pumpkin cake, rolled around in a white cream filling, then in nuts. Can be frozen and served chilled</a>
+                        </p>
+                    </div>
+                    <div class="wrap-background backstretch" style="background-image: url(rolled.jpg)"></div>
+                </div>
+            </div>
+        </section><!-- End vertical-center-wrapper -->
+    </div><!-- End container -->
+</body>
+</html>
