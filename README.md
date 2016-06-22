@@ -12,7 +12,7 @@ Before going deeply, you can refer to these below source with good explanation a
 ####Horizontal
 
 ##### 1. Inline element (like text or button..)
-To simply center text inside a block element is using: __text-align__
+To simply center text inside a block element is using: __text-align: center__
 ######HTML
 ```html
     <div class="border-wrapper horizontal-inline-element-center">
@@ -47,7 +47,8 @@ To horizontally center a block element (like div), use __margin: auto;__
 ####Vertical
 
 ##### 3. Vertical Anything
-This is a bit more tricky, but with only __position: absolute__ and __2D transform__ we are able to align center vertically whatever we want, even if we don’t know its height
+This is a bit more tricky, but with only __position: absolute__ and __transform: translate(0, -50%)__ we are able to align center vertically whatever we want, even if we don’t know its height.
+Translate negative 50% means move an element from its current position to middle of element's height based on Y axis
 ######HTML
 ```html
     <div class="wrap-col">
