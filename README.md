@@ -1,6 +1,7 @@
-###How to use CSS3 Transition and Transforms for Animating Menu "hamburger" icon
+###Centering in CSS - Horizontal and Vertical
 __Demo__: 
 - http://trungk18.github.io/demo/centering-in-css-horizontal-vertical.html
+- http://codepen.io/trungk18/pen/pbNLpM
 
 In CSS, several properties can be used to align elements horizontally and vertically. I hope these below tips will help you understand and able to align the element center horizontal and vertical.
 Before going deeply, you can refer to these below source with good explanation and example.
@@ -48,7 +49,7 @@ To horizontally center a block element (like div), use __margin: auto;__
 
 ##### 3. Vertical Anything
 This is a bit more tricky, but with only __position: absolute__ and __transform: translate(0, -50%)__ we are able to align center vertically whatever we want, even if we don’t know its height.
-Translate negative 50% means move an element from its current position to middle of element's height based on Y axis
+Translate negative 50% means move an element from its current position to middle of element's height based on Y-axis
 ######HTML
 ```html
     <div class="wrap-col">
