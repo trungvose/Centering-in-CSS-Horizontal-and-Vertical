@@ -16,33 +16,33 @@ Before going deeply, you can refer to these below source with good explanation a
 To simply center text inside a block element is using: __text-align: center__
 ######HTML
 ```html
-    <div class="border-wrapper horizontal-inline-element-center">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    </div>
+<div class="border-wrapper horizontal-inline-element-center">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+</div>
 ```
 
 ######CSS
 ```css
-    .horizontal-inline-element-center {
-        text-align: center;
-    }
+.horizontal-inline-element-center {
+    text-align: center;
+}
 ```
 
 ##### 2. Block element (div)
 To horizontally center a block element (like div), use __margin: auto;__
 ######HTML
 ```html
-    <div class="border-wrapper horizontal-block-element-center">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    </div>
+<div class="border-wrapper horizontal-block-element-center">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+</div>
 ```
 
 ######CSS
 ```css
-    .horizontal-block-element-center {
-        max-width: 40em;
-        margin: 0 auto;
-    }
+.horizontal-block-element-center {
+    max-width: 40em;
+    margin: 0 auto;
+}
 ```
 
 ####Vertical
@@ -52,52 +52,52 @@ This is a bit more tricky, but with only __position: absolute__ and __transform:
 Translate negative 50% means move an element from its current position to middle of element's height based on Y-axis
 ######HTML
 ```html
-    <div class="wrap-col">
-        <div class="text-wrap">
-            <h1>
-                <a href="#">Pizza</a>
-            </h1>
-            <p>
-                <a href="#">Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven</a>
-            </p>
-        </div>
-        <div class="wrap-background backstretch" style="background-image: url(pizza.jpg)"></div>
+<div class="wrap-col">
+    <div class="text-wrap">
+        <h1>
+            <a href="#">Pizza</a>
+        </h1>
+        <p>
+            <a href="#">Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven</a>
+        </p>
     </div>
+    <div class="wrap-background backstretch" style="background-image: url(pizza.jpg)"></div>
+</div>
 ```
 
 ######CSS
 ```css
-	.wrap-col {
-        float: left;
-        width: 33.333333%;
-        position: relative;
-    }
+.wrap-col {
+    float: left;
+    width: 33.333333%;
+    position: relative;
+}
 
-        .wrap-col::before {
-            position: absolute;
-            content: '';
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-            background: rgba(128, 128, 128, 0.4);
-        }
-
-    .wrap-background {
-        min-height: 250px;
-    }
-
-    .text-wrap {
+    .wrap-col::before {
         position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
+        content: '';
+        height: 100%;
         width: 100%;
         z-index: 1;
-        text-align: center;
+        background: rgba(128, 128, 128, 0.4);
     }
 
-        .text-wrap a {
-            color: #fff;
-        }
+.wrap-background {
+    min-height: 250px;
+}
+
+.text-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+    .text-wrap a {
+        color: #fff;
+    }
 ```
 
 ####Conclusion
