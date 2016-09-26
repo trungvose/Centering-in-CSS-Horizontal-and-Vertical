@@ -18,6 +18,7 @@ To simply center text inside a block element is using: __text-align: center__
 ```html
 <div class="border-wrapper horizontal-inline-element-center">
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <button>Submit</button>
 </div>
 ```
 
