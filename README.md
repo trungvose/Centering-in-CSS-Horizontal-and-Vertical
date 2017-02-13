@@ -1,6 +1,6 @@
 ###Centering in CSS - Horizontal and Vertical
 __Demo__: 
-- http://trungk18.github.io/demo/centering-in-css-horizontal-vertical.html
+- http://trungk18.github.io/Centering-in-CSS-Horizontal-and-Vertical
 - http://codepen.io/trungk18/pen/pbNLpM
 
 In CSS, several properties can be used to align elements horizontally and vertically. I hope these below tips will help you understand and able to align the element center horizontal and vertical.
