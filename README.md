@@ -1,5 +1,7 @@
-###Centering in CSS - Horizontal and Vertical
-__Demo__: 
+## Centering in CSS - Horizontal and Vertical
+
+### Demo: 
+
 - http://trungk18.github.io/Centering-in-CSS-Horizontal-and-Vertical
 - http://codepen.io/trungk18/pen/pbNLpM
 
@@ -10,11 +12,14 @@ Before going deeply, you can refer to these below source with good explanation a
 - https://css-tricks.com/centering-css-complete-guide/
 - And this repository :)
  
-####Horizontal
+### Horizontal
 
-##### 1. Inline element (like text or button..)
+#### 1. Inline element (like text or button..)
+
 To simply center text inside a block element is using: __text-align: center__
-######HTML
+
+#### HTML
+
 ```html
 <div class="border-wrapper horizontal-inline-element-center">
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -22,23 +27,27 @@ To simply center text inside a block element is using: __text-align: center__
 </div>
 ```
 
-######CSS
+#### CSS
+
 ```css
 .horizontal-inline-element-center {
     text-align: center;
 }
 ```
 
-##### 2. Block element (div)
+#### 2. Block element (div)
+
 To horizontally center a block element (like div), use __margin: auto;__
-######HTML
+
+#### HTML
+
 ```html
 <div class="border-wrapper horizontal-block-element-center">
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 </div>
 ```
 
-######CSS
+#### CSS
 ```css
 .horizontal-block-element-center {
     max-width: 40em;
@@ -46,12 +55,15 @@ To horizontally center a block element (like div), use __margin: auto;__
 }
 ```
 
-####Vertical
+### Vertical
 
 ##### 3. Vertical Anything
-This is a bit more tricky, but with only __position: absolute__ and __transform: translate(0, -50%)__ we are able to align center vertically whatever we want, even if we don’t know its height.
+
+This is a bit more tricky, but with only __position: absolute__ and __transform: translate(0, -50%)__ we are able to align center vertically whatever we want, even if we donï¿½t know its height.
 Translate negative 50% means move an element from its current position to middle of element's height based on Y-axis
-######HTML
+
+#### HTML
+
 ```html
 <div class="wrap-col">
     <div class="text-wrap">
@@ -66,7 +78,8 @@ Translate negative 50% means move an element from its current position to middle
 </div>
 ```
 
-######CSS
+#### CSS
+
 ```css
 .wrap-col {
     float: left;
@@ -100,7 +113,3 @@ Translate negative 50% means move an element from its current position to middle
         color: #fff;
     }
 ```
-
-####Conclusion
-Sometimes it is the essential knowledge but we also facing challenge.  
-Thanks for checking it out and view the demo, feel free to fork and fix the source code then pull back to me.
